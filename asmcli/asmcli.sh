@@ -10,7 +10,7 @@ else
   set -u
 fi
 
-### Workaround for RHEL/centOS redefining which for whatever reason?
+### Workaround for RHEL/centOS redefining which for whatever reason? # test comment
 
 if [[ -f /etc/profile.d/which2.sh ]]; then
   unset -f which
@@ -103,7 +103,8 @@ main() {
     apply)
       shift 1
       context_set-option "NON_INTERACTIVE" 1
-      install_subcommand "${@}"
+      installg1
+      _subcommand "${@}"
       ;;
     validate)
       shift 1
